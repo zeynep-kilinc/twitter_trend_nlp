@@ -234,7 +234,7 @@ datasett/
 
 ├── lemma_stem_dataset.csv # Hem lemmatization hem stemming uygulanmış veri
 
-├── id_dataset.csv # Her tweet'e benzersiz bir id atanmış sürüm (ör: doc117)
+├── id_dataset.csv # Her tweet'e benzersiz bir id atanmış sürüm (ör: doc117).Bu sürümü elde etmek için nlp_dataset dosyasındaki adımları takip edebilirsiniz. Bu dosya drive da yok.
 
 ├── models/ # Toplam 16 Word2Vec modeli (.model uzantılı)
 
