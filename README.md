@@ -224,17 +224,17 @@ pip install pandas numpy nltk gensim scikit-learn matplotlib seaborn openpyxl
 
 datasett/
 
-├── dataset.xlsx # Orijinal ham veri (kullanılmadı)
+├── dataset.csv # Orijinal ham veri (kullanılmadı)
 
-├── dataset_temiz.xlsx # "date" ve "content" sütunlarıyla sadeleştirilmiş sürüm
+├── dataset_temiz.csv # "date" ve "content" sütunlarıyla sadeleştirilmiş sürüm
 
-├── content_clean_versiyon.xlsx # Temizlenmiş içerik (stopword, özel karakter, vs. çıkarılmış)
+├── content_clean_versiyon.csv # Temizlenmiş içerik (stopword, özel karakter, vs. çıkarılmış)
 
-├── lemma_dataset.xlsx # Lemmatizasyon uygulanmış (content_lemma sütunu içerir)
+├── lemma_dataset.csv # Lemmatizasyon uygulanmış (content_lemma sütunu içerir)
 
-├── lemma_stem_dataset.xlsx # Hem lemmatization hem stemming uygulanmış veri
+├── lemma_stem_dataset.csv # Hem lemmatization hem stemming uygulanmış veri
 
-├── id_dataset.xlsx # Her tweet'e benzersiz bir id atanmış sürüm (ör: doc117)
+├── id_dataset.csv # Her tweet'e benzersiz bir id atanmış sürüm (ör: doc117)
 
 ├── models/ # Toplam 16 Word2Vec modeli (.model uzantılı)
 
