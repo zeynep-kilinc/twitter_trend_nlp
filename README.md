@@ -178,18 +178,18 @@ Her veri seti için aşağıdaki 8 parametre kombinasyonuyla toplam 16 model eğ
 ### Çıktı Yolu:
 Tüm model dosyaları: `models/` klasöründe `.model` formatında yer almaktadır.
 
-### Benzerlik Analizi ve Değerlendirme Süreci
+## Benzerlik Analizi ve Değerlendirme Süreci
 
 Bu çalışmanın devamında, vektörleştirilmiş metinler üzerinde benzerlik analizi gerçekleştirilmiştir. Bu süreçte temel amaç, farklı vektörleme modellerinin içerik benzerliğini ne kadar isabetli yansıttığını analiz etmektir.
 
-**Kullanılan Yöntemler:**
-1) Cosine Similarity (Sayısal Benzerlik)
+### Kullanılan Yöntemler:
+**1) Cosine Similarity (Sayısal Benzerlik)**
 Her model için belirli bir giriş tweet’i (örneğin doc117) temel alınarak en benzer 5 tweet belirlenmiştir. Benzerlik, vektörler arası cosine benzerliği üzerinden hesaplanmıştır.
 
-2) Jaccard Benzerliği (Sıralama Tutarlılığı)
+**2) Jaccard Benzerliği (Sıralama Tutarlılığı)**
 Her modelin önerdiği en benzer 5 tweet sıralaması karşılaştırılarak, modeller arası benzerlik bir 18x18 Jaccard matrisi ile görselleştirilmiştir. Bu analiz ile model yapılandırmalarının sıralama tutarlılığına etkisi gözlenmiştir.
 
-3) Anlamsal Değerlendirme (İnsan Gözlemine Dayalı)
+**3) Anlamsal Değerlendirme (İnsan Gözlemine Dayalı)**
 Giriş tweet’i ile önerilen metinler arasındaki anlamsal benzerlik, 1–5 arasında puanlanmıştır:
 
 1: Çok alakasız
