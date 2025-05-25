@@ -3,7 +3,8 @@
 Bu proje, Twitter veri seti kullanılarak metin madenciliği (text mining) ve doğal dil işleme (NLP) teknikleriyle sosyal medya trendlerinin analizini amaçlamaktadır. Özellikle günlük atılan tweet’ler içerisinde geçen metinler ön işleme tekniklerinden geçirilmiş, ardından TF-IDF ve Word2Vec yöntemleriyle vektörleştirilmiştir. Böylece, benzer içeriklerin gruplanması ve olası “trend başlıklarının” belirlenmesi hedeflenmiştir.
 
 **Proje dosyaları boyut olarak büyük olduğundan GitHub’a yüklenemediği için Google Drive bağlantısı üzerinden erişime açılmıştır:**
-https://drive.google.com/file/d/11hg224EK3BNok19t1M236c86rolmO6Fs/view?usp=sharing
+
+https://drive.google.com/file/d/1HT-ey4BeCEyZjfwRW28bmWLIs8mGxiYB/view?usp=sharing
 
 ##  Proje Amacı
 
