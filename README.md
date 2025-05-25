@@ -178,6 +178,34 @@ Her veri seti için aşağıdaki 8 parametre kombinasyonuyla toplam 16 model eğ
 ### Çıktı Yolu:
 Tüm model dosyaları: `models/` klasöründe `.model` formatında yer almaktadır.
 
+### Benzerlik Analizi ve Değerlendirme Süreci
+
+Bu çalışmanın devamında, vektörleştirilmiş metinler üzerinde benzerlik analizi gerçekleştirilmiştir. Bu süreçte temel amaç, farklı vektörleme modellerinin içerik benzerliğini ne kadar isabetli yansıttığını analiz etmektir.
+
+**Kullanılan Yöntemler:**
+1) Cosine Similarity (Sayısal Benzerlik)
+Her model için belirli bir giriş tweet’i (örneğin doc117) temel alınarak en benzer 5 tweet belirlenmiştir. Benzerlik, vektörler arası cosine benzerliği üzerinden hesaplanmıştır.
+
+2) Jaccard Benzerliği (Sıralama Tutarlılığı)
+Her modelin önerdiği en benzer 5 tweet sıralaması karşılaştırılarak, modeller arası benzerlik bir 18x18 Jaccard matrisi ile görselleştirilmiştir. Bu analiz ile model yapılandırmalarının sıralama tutarlılığına etkisi gözlenmiştir.
+
+3) Anlamsal Değerlendirme (İnsan Gözlemine Dayalı)
+Giriş tweet’i ile önerilen metinler arasındaki anlamsal benzerlik, 1–5 arasında puanlanmıştır:
+
+1: Çok alakasız
+
+5: Neredeyse aynı temada
+
+Böylece, modellerin yalnızca sayısal olarak değil, aynı zamanda anlamsal düzeyde de başarısı analiz edilmiştir.
+
+**Elde Edilen Sonuçlar:**
+TF-IDF modelleri (özellikle TFIDF_Stem) anlamsal olarak en başarılı sonuçları üretmiştir. Ortalama skorları 4.4 ve 4.2 olarak ölçülmüştür.
+
+Word2Vec modelleri (CBOW ve Skip-gram fark etmeksizin), cosine benzerlik skorları yüksek olmasına rağmen anlamca zayıf öneriler üretmiş ve semantik puanlamada tüm modellerin ortalaması 1.0 kalmıştır.
+
+Jaccard matrisi sonuçlarına göre, Word2Vec modelleri kendi aralarında yüksek tutarlılığa sahiptir (ör. S_SG_2_100 ↔ S_SG_2_300: Jaccard = 1.00), ancak TF-IDF modelleri ile sıralama örtüşmesi göstermemiştir (Jaccard = 0.00).
+
+Word2Vec yapılandırmalarında pencere boyutu ve vektör boyutunun sıralamayı etkilediği, ancak semantik başarıya doğrudan katkı sağlamadığı gözlenmiştir.
 
 
 
