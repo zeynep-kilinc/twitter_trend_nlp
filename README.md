@@ -220,41 +220,33 @@ Projeyi çalıştırmadan önce aşağıdaki Python kütüphanelerinin kurulu ol
 
 pip install pandas numpy nltk gensim scikit-learn matplotlib seaborn openpyxl
 
-Çalışmalar dataset klasörü içinde organize edilmiştir. Proje Dosya Yapısı
+Çalışmalar dataset klasörü içinde organize edilmiştir. Proje Dosya Yapısı:
 
 datasett/
-├── dataset.xlsx
-│   └── # Orijinal ham veri (çok eski tarihli, kullanılmamış)
-│
-├── dataset_temiz.xlsx
-│   └── # Sadece "date" ve "content" sütunları bırakılmış, sadeleştirilmiş veri
-│
-├── content_clean_versiyon.xlsx
-│   └── # Temizlenmiş içerik (stopword, özel karakter, kısa kelime vs. çıkarıldı)
-│
-├── lemma_dataset.xlsx
-│   └── # Lemmatizasyon uygulanmış sürüm (content_lemma sütunu eklendi)
-│
-├── lemma_stem_dataset.xlsx
-│   └── # Hem lemmatizasyon hem gövdeleme uygulanmış (content_lemma & content_stem sütunları)
-│
-├── id_dataset.xlsx
-│   └── # Her belgeye benzersiz bir ID atanmış sürüm (örnek: doc117)
-│
-├── models/
-│   └── # Gensim ile eğitilmiş toplam 16 adet Word2Vec model dosyası (.model)
-│
-├── tf_idf_models/
-│   └── # TF-IDF ile oluşturulan vectorizer ve sparse matris dosyaları (.pkl)
-│
-├── jaccard_similarity_matrix.pdf
-│   └── # 18x18 Jaccard benzerlik matrisi görselleştirmesi (PDF formatında)
-│
-├── jaccard_similarity_matrix.xlsx
-│   └── # Jaccard benzerlik skorlarının tablo formatında kaydedilmiş hali
-│
-└── nlp_dataset.ipynb
-    └── # Ana analiz dosyası (veri işleme, model eğitimi, değerlendirme vb.)
+
+├── dataset.xlsx # Orijinal ham veri (kullanılmadı)
+
+├── dataset_temiz.xlsx # "date" ve "content" sütunlarıyla sadeleştirilmiş sürüm
+
+├── content_clean_versiyon.xlsx # Temizlenmiş içerik (stopword, özel karakter, vs. çıkarılmış)
+
+├── lemma_dataset.xlsx # Lemmatizasyon uygulanmış (content_lemma sütunu içerir)
+
+├── lemma_stem_dataset.xlsx # Hem lemmatization hem stemming uygulanmış veri
+
+├── id_dataset.xlsx # Her tweet'e benzersiz bir id atanmış sürüm (ör: doc117)
+
+├── models/ # Toplam 16 Word2Vec modeli (.model uzantılı)
+
+├── tf_idf_models/ # TF-IDF vectorizer ve sparse matris dosyaları (.pkl uzantılı)
+
+├── jaccard_similarity_matrix.pdf # 18x18 Jaccard benzerlik matrisinin görselleştirilmiş hali
+
+├── jaccard_similarity_matrix.xlsx # Jaccard skorlarının ham tablo hali (Excel)
+
+└── nlp_dataset.ipynb # Tüm veri işleme, vektörleştirme ve analiz süreçlerini içeren Jupyter Notebook
+
+
 
 
 
