@@ -210,7 +210,7 @@ Jaccard matrisi sonuçlarına göre, Word2Vec modelleri kendi aralarında yükse
 
 Word2Vec yapılandırmalarında pencere boyutu ve vektör boyutunun sıralamayı etkilediği, ancak semantik başarıya doğrudan katkı sağlamadığı gözlenmiştir.
 
-##Çalıştırma Talimatları
+## Çalıştırma Talimatları
 
 Bu proje Python (Jupyter Notebook) ortamında geliştirilmiş olup, veri ön işleme, vektörleştirme, benzerlik analizi ve değerlendirme süreçlerini içermektedir. Aşağıdaki adımları izleyerek projeyi başarıyla çalıştırabilirsiniz:
 
@@ -220,25 +220,42 @@ Projeyi çalıştırmadan önce aşağıdaki Python kütüphanelerinin kurulu ol
 
 pip install pandas numpy nltk gensim scikit-learn matplotlib seaborn openpyxl
 
-Çalışmalar dataset klasörü içinde organize edilmiştir. Önemli dosya ve klasörler şunlardır:
+Çalışmalar dataset klasörü içinde organize edilmiştir. Proje Dosya Yapısı
 
 datasett/
 │
-├── dataset.xlsx                    # Orijinal ham veri (çok eski tarihli, kullanılmamıştır)
-├── dataset_temiz.xlsx             # Sadece "date" ve "content" sütunları bırakılmış, sadeleştirilmiş versiyon
-├── content_clean_versiyon.xlsx    # Temizlenmiş içerik (stopword, özel karakter, kısa kelime vs.)
-├── lemma_dataset.xlsx             # Lemmatization uygulanmış sürüm (content_lemma sütunu içerir)
-├── lemma_stem_dataset.xlsx        # Hem lemmatization hem stemming uygulanmış (content_lemma & content_stem sütunları içerir)
-├── id_dataset.xlsx                # Her belgeye id atanmış sürüm (örneğin: doc117)
+├── dataset.xlsx
+│ # Orijinal ham veri (çok eski tarihli, kullanılmadı)
 │
-├── models/                        # Gensim ile eğitilmiş 16 adet Word2Vec model dosyası (.model)
+├── dataset_temiz.xlsx
+│ # Sadece "date" ve "content" sütunları bırakılmış, sadeleştirilmiş veri
 │
-├── tf_idf_models/                 # TF-IDF ile oluşturulan vektörizer ve matris dosyaları (.pkl formatında)
+├── content_clean_versiyon.xlsx
+│ # Temizlenmiş içerik (stopword, özel karakter, kısa kelime vs. çıkarıldı)
 │
-├── jaccard_similarity_matrix.pdf  # Jaccard benzerlik matrisinin görsel çıktısı (18x18)
-├── jaccard_similarity_matrix.xlsx # Jaccard benzerlik skorlarının Excel tablosu
+├── lemma_dataset.xlsx
+│ # Lemmatization uygulanmış sürüm (content_lemma sütunu eklendi)
 │
-├── nlp_dataset.ipynb              # Tüm veri işleme, modelleme ve analiz işlemlerinin yapıldığı Jupyter Notebook
+├── lemma_stem_dataset.xlsx
+│ # Hem lemmatization hem stemming uygulanmış (content_lemma & content_stem sütunları)
+│
+├── id_dataset.xlsx
+│ # Her belgeye benzersiz bir ID atanmış sürüm (örneğin: doc117)
+│
+├── models/
+│ # Gensim ile eğitilen toplam 16 adet Word2Vec modeli (.model dosyaları)
+│
+├── tf_idf_models/
+│ # TF-IDF ile oluşturulan vectorizer ve sparse matris dosyaları (.pkl uzantılı)
+│
+├── jaccard_similarity_matrix.pdf
+│ # 18x18 Jaccard benzerlik matrisi görselleştirmesi (PDF formatında)
+│
+├── jaccard_similarity_matrix.xlsx
+│ # Jaccard benzerlik skorlarının ham tablo hali (Excel formatında)
+│
+├── nlp_dataset.ipynb
+│ #  Tüm veri işleme, modelleme ve analiz işlemlerinin yapıldığı Jupyter Notebook
 
 
 
