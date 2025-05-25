@@ -248,9 +248,7 @@ datasett/
 
 
 
-
-
-Tüm işlemlerin bulunduğu son dosya id_dataset.csv dosyasıdır. Tüm analizler nlp_dataset.ipynb dosyası üzerinden çalıştırılmalıdır. Sıralama tutarlılığı için jaccard_similarity_matrix.xlsx dosyasındaki 18x18 Jaccard matrisi kullanılır. Anlamsal değerlendirme puanları id_dataset.xlsx üzerinden manuel olarak işlenmiştir.
+Tüm işlemlerin bulunduğu son dosya id_dataset.csv dosyasıdır. Bu dosya Her tweet'e benzersiz bir id atanmış sürümdür. nlp_dataset.ipynb dosyasındaki adımlar takip edilerek elde edilebilir . Drive' daki dosyalar arasında yoktur. Benzerlikler id_dataset.csv dosyası oluşturularak hesaplanır.  Tüm analizler nlp_dataset.ipynb dosyası üzerinden çalıştırılmalıdır. Sıralama tutarlılığı için jaccard_similarity_matrix.xlsx dosyasındaki 18x18 Jaccard matrisi kullanılır. Anlamsal değerlendirme puanları id_dataset.xlsx üzerinden manuel olarak işlenmiştir.
 
 
 
