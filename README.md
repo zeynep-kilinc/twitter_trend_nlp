@@ -184,9 +184,11 @@ Bu çalışmanın devamında, vektörleştirilmiş metinler üzerinde benzerlik 
 
 ### Kullanılan Yöntemler:
 **1) Cosine Similarity (Sayısal Benzerlik)**
+
 Her model için belirli bir giriş tweet’i (örneğin doc117) temel alınarak en benzer 5 tweet belirlenmiştir. Benzerlik, vektörler arası cosine benzerliği üzerinden hesaplanmıştır.
 
 **2) Jaccard Benzerliği (Sıralama Tutarlılığı)**
+
 Her modelin önerdiği en benzer 5 tweet sıralaması karşılaştırılarak, modeller arası benzerlik bir 18x18 Jaccard matrisi ile görselleştirilmiştir. Bu analiz ile model yapılandırmalarının sıralama tutarlılığına etkisi gözlenmiştir.
 
 **3) Anlamsal Değerlendirme (İnsan Gözlemine Dayalı)**
@@ -199,6 +201,7 @@ Giriş tweet’i ile önerilen metinler arasındaki anlamsal benzerlik, 1–5 ar
 Böylece, modellerin yalnızca sayısal olarak değil, aynı zamanda anlamsal düzeyde de başarısı analiz edilmiştir.
 
 **Elde Edilen Sonuçlar:**
+
 TF-IDF modelleri (özellikle TFIDF_Stem) anlamsal olarak en başarılı sonuçları üretmiştir. Ortalama skorları 4.4 ve 4.2 olarak ölçülmüştür.
 
 Word2Vec modelleri (CBOW ve Skip-gram fark etmeksizin), cosine benzerlik skorları yüksek olmasına rağmen anlamca zayıf öneriler üretmiş ve semantik puanlamada tüm modellerin ortalaması 1.0 kalmıştır.
@@ -206,6 +209,48 @@ Word2Vec modelleri (CBOW ve Skip-gram fark etmeksizin), cosine benzerlik skorlar
 Jaccard matrisi sonuçlarına göre, Word2Vec modelleri kendi aralarında yüksek tutarlılığa sahiptir (ör. S_SG_2_100 ↔ S_SG_2_300: Jaccard = 1.00), ancak TF-IDF modelleri ile sıralama örtüşmesi göstermemiştir (Jaccard = 0.00).
 
 Word2Vec yapılandırmalarında pencere boyutu ve vektör boyutunun sıralamayı etkilediği, ancak semantik başarıya doğrudan katkı sağlamadığı gözlenmiştir.
+
+##Çalıştırma Talimatları
+
+Bu proje Python (Jupyter Notebook) ortamında geliştirilmiş olup, veri ön işleme, vektörleştirme, benzerlik analizi ve değerlendirme süreçlerini içermektedir. Aşağıdaki adımları izleyerek projeyi başarıyla çalıştırabilirsiniz:
+
+**Gereksinimler:**
+
+Projeyi çalıştırmadan önce aşağıdaki Python kütüphanelerinin kurulu olduğundan emin olun:
+
+pip install pandas numpy nltk gensim scikit-learn matplotlib seaborn openpyxl
+
+Çalışmalar dataset klasörü içinde organize edilmiştir. Önemli dosya ve klasörler şunlardır:
+
+datasett/
+│
+├── dataset.xlsx                    # Orijinal ham veri (çok eski tarihli, kullanılmamıştır)
+├── dataset_temiz.xlsx             # Sadece "date" ve "content" sütunları bırakılmış, sadeleştirilmiş versiyon
+├── content_clean_versiyon.xlsx    # Temizlenmiş içerik (stopword, özel karakter, kısa kelime vs.)
+├── lemma_dataset.xlsx             # Lemmatization uygulanmış sürüm (content_lemma sütunu içerir)
+├── lemma_stem_dataset.xlsx        # Hem lemmatization hem stemming uygulanmış (content_lemma & content_stem sütunları içerir)
+├── id_dataset.xlsx                # Her belgeye id atanmış sürüm (örneğin: doc117)
+│
+├── models/                        # Gensim ile eğitilmiş 16 adet Word2Vec model dosyası (.model)
+│
+├── tf_idf_models/                 # TF-IDF ile oluşturulan vektörizer ve matris dosyaları (.pkl formatında)
+│
+├── jaccard_similarity_matrix.pdf  # Jaccard benzerlik matrisinin görsel çıktısı (18x18)
+├── jaccard_similarity_matrix.xlsx # Jaccard benzerlik skorlarının Excel tablosu
+│
+├── nlp_dataset.ipynb              # Tüm veri işleme, modelleme ve analiz işlemlerinin yapıldığı Jupyter Notebook
+
+
+
+Tüm işlemlerin bulunduğu son dosya id_dataset.csv dosyasıdır. Tüm analizler nlp_dataset.ipynb dosyası üzerinden çalıştırılmalıdır. Sıralama tutarlılığı için jaccard_similarity_matrix.xlsx dosyasındaki 18x18 Jaccard matrisi kullanılır. Anlamsal değerlendirme puanları id_dataset.xlsx üzerinden manuel olarak işlenmiştir.
+
+
+
+
+
+
+
+
 
 
 
