@@ -223,39 +223,38 @@ pip install pandas numpy nltk gensim scikit-learn matplotlib seaborn openpyxl
 Çalışmalar dataset klasörü içinde organize edilmiştir. Proje Dosya Yapısı
 
 datasett/
-│
 ├── dataset.xlsx
-│ # Orijinal ham veri (çok eski tarihli, kullanılmadı)
+│   └── # Orijinal ham veri (çok eski tarihli, kullanılmamış)
 │
 ├── dataset_temiz.xlsx
-│ # Sadece "date" ve "content" sütunları bırakılmış, sadeleştirilmiş veri
+│   └── # Sadece "date" ve "content" sütunları bırakılmış, sadeleştirilmiş veri
 │
 ├── content_clean_versiyon.xlsx
-│ # Temizlenmiş içerik (stopword, özel karakter, kısa kelime vs. çıkarıldı)
+│   └── # Temizlenmiş içerik (stopword, özel karakter, kısa kelime vs. çıkarıldı)
 │
 ├── lemma_dataset.xlsx
-│ # Lemmatization uygulanmış sürüm (content_lemma sütunu eklendi)
+│   └── # Lemmatizasyon uygulanmış sürüm (content_lemma sütunu eklendi)
 │
 ├── lemma_stem_dataset.xlsx
-│ # Hem lemmatization hem stemming uygulanmış (content_lemma & content_stem sütunları)
+│   └── # Hem lemmatizasyon hem gövdeleme uygulanmış (content_lemma & content_stem sütunları)
 │
 ├── id_dataset.xlsx
-│ # Her belgeye benzersiz bir ID atanmış sürüm (örneğin: doc117)
+│   └── # Her belgeye benzersiz bir ID atanmış sürüm (örnek: doc117)
 │
 ├── models/
-│ # Gensim ile eğitilen toplam 16 adet Word2Vec modeli (.model dosyaları)
+│   └── # Gensim ile eğitilmiş toplam 16 adet Word2Vec model dosyası (.model)
 │
 ├── tf_idf_models/
-│ # TF-IDF ile oluşturulan vectorizer ve sparse matris dosyaları (.pkl uzantılı)
+│   └── # TF-IDF ile oluşturulan vectorizer ve sparse matris dosyaları (.pkl)
 │
 ├── jaccard_similarity_matrix.pdf
-│ # 18x18 Jaccard benzerlik matrisi görselleştirmesi (PDF formatında)
+│   └── # 18x18 Jaccard benzerlik matrisi görselleştirmesi (PDF formatında)
 │
 ├── jaccard_similarity_matrix.xlsx
-│ # Jaccard benzerlik skorlarının ham tablo hali (Excel formatında)
+│   └── # Jaccard benzerlik skorlarının tablo formatında kaydedilmiş hali
 │
-├── nlp_dataset.ipynb
-│ #  Tüm veri işleme, modelleme ve analiz işlemlerinin yapıldığı Jupyter Notebook
+└── nlp_dataset.ipynb
+    └── # Ana analiz dosyası (veri işleme, model eğitimi, değerlendirme vb.)
 
 
 
